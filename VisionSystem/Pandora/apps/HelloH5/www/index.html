@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>视力表</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/lib/light7.min.css" rel="stylesheet" />
+    <link href="css/lib/light7-swiper.min.css" rel="stylesheet" />
+    <link href="css/lib/light7-swipeout.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+</head>
+<body>
+    <!--首页-->
+    <div class="page index page-current" id="index">
+        <a href="#" onclick="$.router.loadPage('#visualAcuity');">开始筛查</a>
+    </div>
+    <!--视力表-->
+    <div class="page vaBox " id="visualAcuity" num="1">
+        <header class="header bar bar-nav">
+            <h1 class="title">百夫视力筛查系统</h1>
+            <div class="button button-link button-nav pull-right" onclick="clicked('barcode_scan.html', true, true);"><i class="icon icon-saoma"><a href="#"></a></i></div>
+        </header>
+        <div class="content">
+            <div class="c-logo">
+                <div class="c-logo_img">
+                    <span>视力表</span>
+                </div>
+            </div>
+            <div class="content-block va">
+                <div class="row">
+                    <div class="border-up col-40">
+                        <img src="img/yunUp.png">
+                    </div>
+                </div>
+                <div class="row main-content-row ebox">
+                    <div class="main-content">
+                        <img src="img/D-E.png" class="col-20" />
+                        <!--<img src="img/W-E.png" class="col-20" / >
+                        <img src="img/A-E.png" class="col-20" / >-->
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="border-down col-40">
+                        <img src="img/yunDowm.png">
+                    </div>
+
+                </div>
+                <div class="row v-table no-gutter margin-small-top degrees-table">
+                    <ul>
+                        <li class="col-18 active">4.0</li>
+                        <li class="col-18">4.1</li>
+                        <li class="col-18">4.2</li>
+                        <li class="col-18">4.3</li>
+                        <li class="col-18">4.4</li>
+                        <li class="col-18">4.5</li>
+                        <li class="col-18">4.6</li>
+                        <li class="col-18">4.7</li>
+                        <li class="col-18">4.8</li>
+                        <li class="col-18">4.9</li>
+                        <li class="col-18">5.0</li>
+                        <li class="col-18">5.1</li>
+                        <li class="col-18">5.2</li>
+                        <li class="col-18" style="visibility:hidden"></li>
+                        <li class="col-18" style="visibility:hidden"></li>
+
+                    </ul>
+                </div>
+                <div class="content-block-title margin-big-top">
+                    <div class="margin-big-auto">
+                        <a href="#" class="button button-big button-green-o" id="nextNight">下一个</a>
+                        <a href="#submit" class="button button-big button-gray-o sub">提交报告</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--夜视力-->
+    <div class="page vaBox" id="nightAcuity"  num="2">
+        <header class="header bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/visualAcuity" data-popover=".popover-links"> <span class="icon icon-left" id="n_left"></span></a>
+            <h1 class="title">百夫视力筛查系统</h1>
+        </header>
+        <div class="content">
+            <div class="c-logo">
+                <div class="c-logo_img">
+                    <span>夜视力</span>
+                </div>
+            </div>
+            <div class="content-block va">
+                <div class="row">
+                    <div class="border-up col-40">
+                        <img src="img/yunUp.png">
+                    </div>
+                </div>
+                <div class="row main-content-row">
+                    <div class="main-content ebox">
+                        <img src="img/A-E.png" class="col-20" />
+                        <!--<img src="img/D-E.png" class="col-20"/ >
+                        <img src="img/W-E.png" class="col-20" / >-->
+                        
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="border-down col-40"> 
+                        <img src="img/yunDowm.png">
+                    </div>
+
+                </div>
+                <div class="row v-table no-gutter margin-small-top degrees-table">
+                    <ul>
+                        <li class="col-18 active">4.0</li>
+                        <li class="col-18">4.1</li>
+                        <li class="col-18">4.2</li>
+                        <li class="col-18">4.3</li>
+                        <li class="col-18">4.4</li>
+                        <li class="col-18">4.5</li>
+                        <li class="col-18">4.6</li>
+                        <li class="col-18">4.7</li>
+                        <li class="col-18">4.8</li>
+                        <li class="col-18">4.9</li>
+                        <li class="col-18">5.0</li>
+                        <li class="col-18">5.1</li>
+                        <li class="col-18">5.2</li>
+                        <li class="col-18" style="visibility:hidden"></li>
+                        <li class="col-18" style="visibility:hidden"></li>
+
+                    </ul>
+                </div>
+                <div class="content-block-title margin-big-top">
+                    <div class="margin-big-auto">
+                        <a href="#" class="button button-big button-green-o" id="nextColor">下一个</a>
+                        <a href="#submit" class="button button-big button-gray-o sub">提交报告</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--色盲-->
+    <div class="page vaBox" id="colorBlindness" num="3">
+        <header class="header bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/nightAcuity" data-popover=".popover-links"> <span class="icon icon-left" id="color_left"></span></a>
+            <h1 class="title">百夫视力筛查系统</h1>
+        </header>
+        <div class="content">
+            <div class="c-logo">
+                <div class="c-logo_img">
+                    <span>色盲筛查图</span>
+                </div>
+            </div>
+            <div class="content-block va">
+                <div class="row no-gutter">
+                    <div class="main-content ss" id="color_B">
+                        <img src="img/active/s1.png">
+                    </div>
+                </div>
+
+                <div class="content-block-title margin-big-top">
+                    <div class="margin-big-auto">
+                        <a href="#" class="button button-big button-green-o" id="nextredG">下一个</a>
+                        <a href="#submit" class="button button-big button-gray-o sub">提交报告</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--红绿-->
+    <div class="page vaBox" id="redGreen" num="4">
+        <header class="header bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/colorBlindness" data-popover=".popover-links"> <span class="icon icon-left" id="redG_left"></span></a>
+            <h1 class="title">百夫视力筛查系统</h1>
+        </header>
+        <div class="content">
+            <div class="c-logo">
+                <div class="c-logo_img">
+                    <span>红绿随机点立体图</span>
+                </div>
+            </div>
+            <div class="content-block va">
+                <div class="row no-gutter">
+                    <div class="main-content ss" id="red_green">
+                        <img src="img/active/r1.png">
+                    </div>
+                </div>
+
+                <div class="content-block-title margin-big-top">
+                    <div class="margin-big-auto">
+                        <a href="#" class="button button-big button-green-o" id="nextSub">下一个</a>
+                        <a href="#submit" class="button button-big button-gray-o sub" id="bg">提交报告</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--提交报告-->
+    <div class="page vaBox" id="submit"  num="5">
+        <header class="header bar bar-nav">
+            <a class="button button-link button-nav pull-left back" href="/docs-demos/redGreen" data-popover=".popover-links"> <span class="icon icon-left" id="sub_left"></span></a>
+            <h1 class="title">百夫视力筛查系统</h1>
+        </header>
+        <div class="content">
+            <div class="c-logo">
+                <div class="c-logo_img">
+                    <span>提交报告</span>
+                </div>
+            </div>
+            <div class="content-block va">
+                <div class="row v-table no-gutter margin-small-top  main-content-row eyes_box Tdegrees-table">
+                    <div class="eye_box">
+                        <div class="eyes_v">左眼视力</div>
+                        <ul id="left">
+                            <li class="col-18">4.0</li>
+                            <li class="col-18">4.1</li>
+                            <li class="col-18">4.2</li>
+                            <li class="col-18">4.3</li>
+                            <li class="col-18">4.4</li>
+                            <li class="col-18">4.5</li>
+                            <li class="col-18">4.6</li>
+                            <li class="col-18">4.7</li>
+                            <li class="col-18">4.8</li>
+                            <li class="col-18">4.9</li>
+                            <li class="col-18">5.0</li>
+                            <li class="col-18">5.1</li>
+                            <li class="col-18">5.2</li>
+                            <li class="col-18" style="visibility:hidden"></li>
+                            <li class="col-18" style="visibility:hidden"></li>
+                        </ul>
+                    </div>
+                    <div class="eye_box">
+                        <div class="eyes_v">右眼视力</div>
+                        <ul id="right">
+                            <li class="col-18">4.0</li>
+                            <li class="col-18">4.1</li>
+                            <li class="col-18">4.2</li>
+                            <li class="col-18">4.3</li>
+                            <li class="col-18">4.4</li>
+                            <li class="col-18">4.5</li>
+                            <li class="col-18">4.6</li>
+                            <li class="col-18">4.7</li>
+                            <li class="col-18">4.8</li>
+                            <li class="col-18">4.9</li>
+                            <li class="col-18">5.0</li>
+                            <li class="col-18">5.1</li>
+                            <li class="col-18">5.2</li>
+                            <li class="col-18" style="visibility:hidden"></li>
+                            <li class="col-18" style="visibility:hidden"></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="row v-table no-gutter margin-small-top  main-content-row eyes_box changeBox">
+                    <div class="col-100">
+                        <div class="span">色盲筛查图</div>
+                        <div class="chage row no-gutter">
+                            <div class="col-33 trues active"><img src="img/yesa.png"><span>正常</span></div>
+                            <div class="col-33 falses"><img src="img/none.png"><span>异常</span></div>
+                            <div class="col-33 notm"><img src="img/notm.png"><span>未测</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row v-table no-gutter margin-small-top  main-content-row eyes_box changeBox">
+                    <div class="col-100">
+                        <div class="span">红绿随机点立体图</div>
+                        <div class="chage row no-gutter">
+                            <div class="col-33 trues active"><img src="img/yesa.png"><span>正常</span></div>
+                            <div class="col-33 falses"><img src="img/none.png"><span>异常</span></div>
+                            <div class="col-33 notm"><img src="img/notm.png"><span>未测</span></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row v-table no-gutter margin-small-top  main-content-row eyes_box changeBox">
+                    <div class="col-100">
+                        <div class="span">眼位</div>
+                        <div class="chage row no-gutter">
+                            <div class="col-33 trues active"><img src="img/yesa.png"><span>正常</span></div>
+                            <div class="col-33 falses"><img src="img/none.png"><span>异常</span></div>
+                            <div class="col-33 notm"><img src="img/notm.png"><span>未测</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row v-table no-gutter margin-small-top  main-content-row eyes_box changeBox">
+                    <div class="col-100">
+                        <div class="span">夜视力</div>
+                        <div class="chage row no-gutter">
+                            <div class="col-33 trues active"><img src="img/yesa.png"><span>正常</span></div>
+                            <div class="col-33 falses"><img src="img/none.png"><span>异常</span></div>
+                            <div class="col-33 notm"><img src="img/notm.png"><span>未测</span></div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row no-gutter ct-row margin-small-top input_content" style="margin-top:1.3rem;">
+                    <div class="col-100">  编号：<input type="text" id="num" style="width:80%;text-indent:.3rem;" placeholder="请输入对应学生二维码编号信息"></div>
+                </div>-->
+                <div class="content-block-title margin-big-top">
+                    <div class="margin-big-auto">
+                        <a href="#" class="button button-big button-green-o" id="sub">提交</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--扫描-->
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <script src="js/lib/light7.min.js"></script>
+    <script src="js/lib/light7-city-picker.min.js"></script>
+    <script src="js/lib/light7-swipeout.js"></script>
+    <script src="js/lib/light7-swiper.min.js"></script>
+    <script src="js/lib/socket.io-1.2.0.js"></script>
+    <script src="js/lib/com.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        function scaned(t, r, f) {
+            $.toast("成功加载页面");
+            scaneds(t, r, f);
+          
+        }
+        function submitSca(t, r, f) {
+            $.toast("扫码提交成功");
+            Initialization(t, r, f);
+
+         
+        }
+    </script>
+</body>
+
+</html>
